@@ -59,7 +59,7 @@ Think about the setting of the device: is the environment a place where the devi
 
 \*\***Include sketches of what your devices might look like here.**\*\*
 
-![alt text](http://url/to/img.png)
+![alt text](https://github.com/984580403hyxhj/Interactive-Lab-Hub/blob/Fall2022/Lab%201/iad-9.jpg)
 
 \*\***What concerns or opportunitities are influencing the way you've designed the device to look?**\*\*
 In nature, we want to use this device to amplify the user’s emotion, and designing it to look a certain way will definitely help to amplify certain emotions. We are concerned that it will reduce the experience of other emotions(having a cute animal design probably doesn’t go with sadness).
