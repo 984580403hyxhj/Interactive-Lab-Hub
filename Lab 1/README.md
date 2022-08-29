@@ -14,7 +14,6 @@ Goals: the website will play the music and display the color that resonates with
 
 
 \*\***Include pictures of your storyboards here**\*\*
-
 Storyboards: https://github.com/984580403hyxhj/Interactive-Lab-Hub/blob/Fall2022/Lab%201/iad.pdf
 
 
