@@ -72,6 +72,10 @@ Lamp: it is the least intrusive design, so that the user won’t even notice the
 \*\***Take a video of your prototyped interaction.**\*\*
 
 
+https://user-images.githubusercontent.com/54753807/187296384-f4f45f58-daeb-4188-afed-38b59793bd4c.mp4
+
+
+
 
 \*\***Please indicate anyone you collaborated with on this Lab.**\*\*
 Be generous in acknowledging their contributions! And also recognizing any other influences (e.g. from YouTube, Github, Twitter) that informed your design. 
