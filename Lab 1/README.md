@@ -38,7 +38,7 @@ We need to filter the music played in our interface(bad words, ethnicity, and et
 ## Part C. Prototype the device
 
 \*\***Give us feedback on Tinkerbelle.**\*\*
-
+I think it would be very cool if we can search video, and display it on our screen
 
 ## Part D. Wizard the device
 Take a little time to set up the wizarding set-up that allows for someone to remotely control the device while someone acts with it. Hint: You can use Zoom to record videos, and you can pin someone’s video feed if that is the scene which you want to record. 
@@ -47,7 +47,19 @@ Take a little time to set up the wizarding set-up that allows for someone to rem
 
 Prototype: https://github.com/984580403hyxhj/Interactive-Lab-Hub/blob/Fall2022/Lab%201/IMG_3523.mov
 
+
+
+
 \*\***Show the follow-up work here.**\*\*
+We came up with a mapping of colors and emotions, and also found music. Our prototype is on our phone, but if we can move this interaction to other platform we can improve the effect. We decided to use a TV with speakers.
+List:
+Happy: happy background music ; orange
+Sad: pathetique; blue
+Scared: sad horror music; black
+Social: Buena Vista Social Club; pink
+Exciting: Mood; yellow
+Angry: req45, Red
+Chill: bach, Green
 
 
 ## Part E. Costume the device
@@ -79,7 +91,7 @@ https://user-images.githubusercontent.com/54753807/187296384-f4f45f58-daeb-4188-
 
 \*\***Please indicate anyone you collaborated with on this Lab.**\*\*
 Be generous in acknowledging their contributions! And also recognizing any other influences (e.g. from YouTube, Github, Twitter) that informed your design. 
-
+Team members: Jingze Xue, Uddandam Akhil, Toby, and Christy
 
 
 # Staging Interaction, Part 2 
