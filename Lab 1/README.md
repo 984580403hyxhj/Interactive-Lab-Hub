@@ -1,4 +1,4 @@
-
+# Staging Interaction, Part 2 
 
 ## Part A. Plan 
 
@@ -90,24 +90,3 @@ Lamp: it is the least intrusive design, so that the user won’t even notice the
 \*\***Please indicate anyone you collaborated with on this Lab.**\*\*
 Be generous in acknowledging their contributions! And also recognizing any other influences (e.g. from YouTube, Github, Twitter) that informed your design. 
 Team members: Jingze Xue, Uddandam Akhil, Toby, and Christy
-
-
-# Staging Interaction, Part 2 
-
-This describes the second week's work for this lab activity.
-
-
-## Prep (to be done before Lab on Wednesday)
-
-You will be assigned three partners from another group. Go to their github pages, view their videos, and provide them with reactions, suggestions & feedback: explain to them what you saw happening in their video. Guess the scene and the goals of the character. Ask them about anything that wasn’t clear. 
-
-\*\***Summarize feedback from your partners here.**\*\*
-
-## Make it your own
-
-Do last week’s assignment again, but this time: 
-1) It doesn’t have to (just) use light, 
-2) You can use any modality (e.g., vibration, sound) to prototype the behaviors! Again, be creative! Feel free to fork and modify the tinkerbell code! 
-3) We will be grading with an emphasis on creativity. 
-
-\*\***Document everything here. (Particularly, we would like to see the storyboard and video, although photos of the prototype are also great.)**\*\*
