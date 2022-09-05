@@ -14,7 +14,7 @@ Goals: the website will play the music and display the color that resonates with
 
 
 \*\***Include pictures of your storyboards here**\*\*
-Storyboards: https://github.com/984580403hyxhj/Interactive-Lab-Hub/blob/Fall2022/Lab%201/iad.pdf
+Storyboards: https://github.com/984580403hyxhj/Interactive-Lab-Hub/blob/Fall2022/Lab%201/Lab1_2.pdf
 
 
 \*\***Summarize feedback you got here.**\*\*
@@ -83,9 +83,7 @@ Lamp: it is the least intrusive design, so that the user won’t even notice the
 
 \*\***Take a video of your prototyped interaction.**\*\*
 
-
-https://user-images.githubusercontent.com/54753807/187296384-f4f45f58-daeb-4188-afed-38b59793bd4c.mp4
-
+[![Watch the video](https://i.imgur.com/vKb2F1B.png)](https://youtu.be/TBB9mqJjV80)
 
 
 
