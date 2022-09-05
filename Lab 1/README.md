@@ -83,7 +83,7 @@ Lamp: it is the least intrusive design, so that the user won’t even notice the
 
 \*\***Take a video of your prototyped interaction.**\*\*
 
-[![Watch the video](https://i.imgur.com/vKb2F1B.png)](https://youtu.be/TBB9mqJjV80)
+[![Watch the video]](https://youtu.be/TBB9mqJjV80)
 
 
 
