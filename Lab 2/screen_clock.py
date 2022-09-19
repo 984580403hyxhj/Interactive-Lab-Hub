@@ -1,3 +1,4 @@
+import datetime
 import time
 import subprocess
 import digitalio
@@ -60,11 +61,56 @@ backlight = digitalio.DigitalInOut(board.D22)
 backlight.switch_to_output()
 backlight.value = True
 
+calender = {1 : [("VR/AR", "9:40"), ("PSYsocial", "11:00"), ("HCI", "13:00")],
+            2 : [("idd", "8:20"), ("AML", "13:00")],
+            3 : [("VR/AR", "9:40"), ("PSYsocial", "11:00"), ("HCI", "13:00")],
+            4 : [("idd", "8:20"), ("AML", "13:00")]
+            }
+
+weekDayName = {
+    1 : "Monday",
+    2 : "Tuesday",
+    3 : "Wednesday",
+    4 : "Thursday",
+    5 : "Friday",
+    6 : "Saturday",
+    7 : "Sunday"
+}
+
 while True:
     # Draw a black filled box to clear the image.
     draw.rectangle((0, 0, width, height), outline=0, fill=0)
 
     #TODO: Lab 2 part D work should be filled in here. You should be able to look in cli_clock.py and stats.py 
+    # if buttonA.value and buttonB.value:
+    #     backlight.value = False  # turn off backlight
+    # else:
+    #     backlight.value = True  # turn on backlight
+    # if buttonB.value and not buttonA.value:  # just button A pressed
+    #     display.fill(screenColor) # set the screen to the users color
+    # if buttonA.value and not buttonB.value:  # just button B pressed
+    #     display.fill(color565(255, 255, 255))  # set the screen to white
+    # if not buttonA.value and not buttonB.value:  # none pressed
+    #     display.fill(color565(0, 255, 0))  # green
+    # y = top
+    # draw.text((x, y), IP, font=font, fill="#FFFFFF")
+    # y += font.getsize(IP)[1]
+    # draw.text((x, y), WTTR, font=font, fill="#FFFF00")
+    # y += font.getsize(WTTR)[1]
+    # draw.text((x, y), USD, font=font, fill="#0000FF")
+    # y += font.getsize(USD)[1]
+    # draw.text((x, y), Temp, font=font, fill="#FF00FF")
+    now = datetime.datetime.now()
+    weekday = now.weekday()
+    backlight.value = True
+    if buttonA.value and buttonB.value:
+        welcome = "Hello, today is " + weekDayName[weekday]
+        dayInfo = "You have " + str(len(calender(weekday))) + " classes"
+        y = top
+        draw.text((x, y), welcome, font=font, fill="#FFFFFF")
+        y += font.getsize(welcome)[1]
+        draw.text((x,y), dayInfo, font = font, fill="FFFF00")
+
 
     # Display image.
     disp.image(image, rotation)
