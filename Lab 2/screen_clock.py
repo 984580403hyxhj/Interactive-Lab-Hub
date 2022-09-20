@@ -152,7 +152,16 @@ while True:
             draw.text((x,y), output, font=font, fill="#FFFF00")
 
     if not buttonA.value and not buttonB.value:
-        pass
+        info = "Next classes is "
+        for i in calender[weekday]:
+            tempTime = datetime.strptime(i[1])
+            tempTime.strftime('%H:%M')
+            now.strptime('%H:%M')
+            if tempTime > now:
+                info = info + i[0]
+                y = top
+                draw.text((x, y), output, font=font, fill="#FFFFFF")
+                info = "You still have " + str(tempTime - now)
 
     # Display image.
     disp.image(image, rotation)
