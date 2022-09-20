@@ -116,7 +116,7 @@ while True:
         y += font.getsize(welcome)[1]
         draw.text((x,y), dayInfo, font = font, fill="#FFFFFF")
 
-    if not ButtonA.value and buttonB.value:
+    if not buttonA.value and buttonB.value:
         info = "Your classes are:"
         y = top
         draw.text((x, y), info, font=font, fill="#FFFFFF")
