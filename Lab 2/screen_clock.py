@@ -106,15 +106,15 @@ while True:
     # y += font.getsize(USD)[1]
     # draw.text((x, y), Temp, font=font, fill="#FF00FF")
     now = datetime.datetime.now()
-    weekday = now.weekday()
+    weekday = now.weekday() + 1
     backlight.value = True
     if buttonA.value and buttonB.value:
         welcome = "Hello, today is " + weekDayName[weekday]
-        dayInfo = "You have " + str(len(calender(weekday))) + " classes"
+        dayInfo = "You have " + str(len(calender[weekday])) + " classes"
         y = top
         draw.text((x, y), welcome, font=font, fill="#FFFFFF")
         y += font.getsize(welcome)[1]
-        draw.text((x,y), dayInfo, font = font, fill="FFFF00")
+        draw.text((x,y), dayInfo, font = font, fill="#FFFFFF")
 
     if not ButtonA.value and buttonB.value:
         info = "Your classes are:"
