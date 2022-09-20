@@ -157,7 +157,7 @@ while True:
         draw.rectangle((0, 0, width, height), outline=0, fill=0)
         info = "Next classes is "
         for i in calender[weekday]:
-            tempTime = datetime.strptime(i[1])
+            tempTime = datetime.datetime.strptime(i[1])
             tempTime.strftime('%H:%M')
             now.strptime('%H:%M')
             if tempTime > now:
