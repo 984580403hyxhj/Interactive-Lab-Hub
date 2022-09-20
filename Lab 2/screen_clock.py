@@ -133,7 +133,7 @@ while True:
         # welcome = "Welcome to CT Calender"
         # y = top
         # draw.text((x+width, y+width), welcome, font=font, fill=0)
-
+        print("none")
     if not buttonA.value and buttonB.value:
         draw.rectangle((0, 0, width, height), outline=0, fill=0)
         welcome = "Hello, today is " + weekDayName[weekday]
@@ -142,6 +142,7 @@ while True:
         draw.text((x, y), welcome, font=font, fill="#FFFFFF")
         y += font.getsize(welcome)[1]
         draw.text((x,y), dayInfo, font = font, fill="#FFFFFF")
+        print("A")
 
     if buttonA.value and not buttonB.value:
         draw.rectangle((0, 0, width, height), outline=0, fill=0)
@@ -152,14 +153,22 @@ while True:
             y += font.getsize(info)[1]
             output = i[0] + " at " + i[1]
             draw.text((x,y), output, font=font, fill="#FFFF00")
+        print("B")
+
 
     if not buttonA.value and not buttonB.value:
         draw.rectangle((0, 0, width, height), outline=0, fill=0)
         info = "Next classes is "
         for i in calender[weekday]:
+<<<<<<< HEAD
             tempTime = datetime.datetime.strptime(i[1])
             tempTime.strftime('%H:%M')
             now.strptime('%H:%M')
+=======
+            tempTime = datetime.datetime.strptime(i[1], '%H:%M')
+            #tempTime.strftime('%H:%M')
+            now.strftime('%H:%M')
+>>>>>>> a55bda74db094892fda38d9f52337feeb80c3c0d
             if tempTime > now:
                 info = info + i[0]
                 y = top
