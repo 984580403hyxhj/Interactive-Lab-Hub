@@ -130,6 +130,10 @@ while True:
         y = scaled_height // 2 - height // 2
         image = image.crop((x, y, x + width, y + height))
 
+        welcome = "Welcome to CT Calender"
+        y = top
+        draw.text((x, y), welcome, font=font, fill="#FFFFFF")
+
     if not buttonA.value and buttonB.value:
         welcome = "Hello, today is " + weekDayName[weekday]
         dayInfo = "You have " + str(len(calender[weekday])) + " classes"
