@@ -132,7 +132,7 @@ while True:
 
         welcome = "Welcome to CT Calender"
         y = top
-        draw.text((x, y), welcome, font=font, fill="#FFFFFF")
+        draw.text((x, y), welcome, font=font, fill=0)
 
     if not buttonA.value and buttonB.value:
         welcome = "Hello, today is " + weekDayName[weekday]
