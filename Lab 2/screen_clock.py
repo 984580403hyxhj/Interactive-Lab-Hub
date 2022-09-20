@@ -123,7 +123,7 @@ while True:
         for i in calender[weekday]:
             y += font.getsize(info)[1]
             output = i[0] + " at " + i[1]
-            draw.text((x,y), output, font=font, fill="#FFFF00" )
+            draw.text((x,y), output, font=font, fill="#FFFF00")
 
     # Display image.
     disp.image(image, rotation)
