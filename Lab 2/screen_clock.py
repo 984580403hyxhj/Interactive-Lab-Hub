@@ -110,6 +110,11 @@ while True:
     backlight.value = True
     if buttonA.value and buttonB.value:
         image = Image.open("red.jpg")
+        backlight = digitalio.DigitalInOut(board.D22)
+        backlight.switch_to_output()
+        backlight.value = True
+
+        # Scale the image to the smaller screen dimension
         image_ratio = image.width / image.height
         screen_ratio = width / height
         if screen_ratio < image_ratio:
