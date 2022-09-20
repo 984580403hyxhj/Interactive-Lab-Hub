@@ -160,15 +160,13 @@ while True:
         draw.rectangle((0, 0, width, height), outline=0, fill=0)
         info = "Next classes is "
         for i in calender[weekday]:
-<<<<<<< HEAD
             tempTime = datetime.datetime.strptime(i[1])
             tempTime.strftime('%H:%M')
             now.strptime('%H:%M')
-=======
+
             tempTime = datetime.datetime.strptime(i[1], '%H:%M')
             #tempTime.strftime('%H:%M')
             now.strftime('%H:%M')
->>>>>>> a55bda74db094892fda38d9f52337feeb80c3c0d
             if tempTime > now:
                 info = info + i[0]
                 y = top
