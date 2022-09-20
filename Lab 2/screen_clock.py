@@ -129,11 +129,14 @@ while True:
         # x = scaled_width // 2 - width // 2
         # y = scaled_height // 2 - height // 2
         # image = image.crop((x, y, x + width, y + height))
-
+        draw.rectangle((0, 0, width, height), outline=0, fill=0)
         welcome = "Welcome to CT Calender"
         y = top
-        draw.text((x+width, y+width), welcome, font=font, fill=0)
-        print("none")
+        draw.text((x, y), welcome, font=font, fill="#FFFFFF")
+        y += font.getsize(welcome)[1]
+        draw.text((x,y), "Time:"+str(now), font=font, fill="#FFFFFF")
+        #print("none")
+        pass
     if not buttonA.value and buttonB.value:
         draw.rectangle((0, 0, width, height), outline=0, fill=0)
         welcome = "Hello, today is " + weekDayName[weekday]
@@ -159,20 +162,31 @@ while True:
     if not buttonA.value and not buttonB.value:
         draw.rectangle((0, 0, width, height), outline=0, fill=0)
         info = "Next classes is "
+        have_class = False
         for i in calender[weekday]:
-            tempTime = datetime.datetime.strptime(i[1])
-            tempTime.strftime('%H:%M')
-            now.strptime('%H:%M')
-
             tempTime = datetime.datetime.strptime(i[1], '%H:%M')
-            #tempTime.strftime('%H:%M')
-            now.strftime('%H:%M')
-            if tempTime > now:
+            class_hour = tempTime.hour
+            class_minute = tempTime.minute
+            hour = now.hour
+            minute = now.minute
+            if class_hour > hour or class_hour == hour and class_minute > minute:
+                print("got it")
+                have_class = False
                 info = info + i[0]
                 y = top
                 draw.text((x, y), output, font=font, fill="#FFFFFF")
-                info = "You still have " + str(tempTime - now)
-
+                minute_gap = class_minute - minute
+                if minute_gap < 0:
+                    minute_gap = 60 + minute_gap
+                    class_hour -= 1
+                hour_gap = class_hour - hour
+                info = "You have " + hour_gap + " hours and " + minute_gap + " minutes"
+                y += font.getsize(info)[1]
+                draw.text((x,y), info, font=font, fill="#FFFF00")
+                break
+        print(have_class)
+        if not have_class:
+            draw.text((x,y), "You have no class! Enjoy!", font=font, fill="#00FF00")
     # Display image.
     disp.image(image, rotation)
     time.sleep(1)
