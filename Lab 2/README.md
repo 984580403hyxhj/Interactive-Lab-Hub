@@ -208,6 +208,9 @@ After that, Git will ask you to login to your GitHub account to push the updates
 
 \*\*\***Take a video of your PiClock.**\*\*\*
 
+https://youtube.com/shorts/yPl8dhTY8VM?feature=share
+
+
 ## Part G. 
 ## Sketch and brainstorm further interactions and features you would like for your clock for Part 2.
 
@@ -215,10 +218,14 @@ After that, Git will ask you to login to your GitHub account to push the updates
 # Prep for Part 2
 
 1. Pick up remaining parts for kit on Thursday lab class. Check the updated [parts list inventory](partslist.md) and let the TA know if there is any part missing.
-  
+  ![IMG_F3896AEC9351-1](https://user-images.githubusercontent.com/54753807/191149877-55c9ffc6-f4ed-4dff-8344-abe548ae77f9.jpeg)
+
 
 2. Look at and give feedback on the Part G. for at least 2 other people in the class (and get 2 people to comment on your Part G!)
-
+ I think the interaction is good, especially the color makes the important information very clear to the users. And this device will make us more aware about our time.
+ 
+ I like the interaction, however I think the idea could be expanded onto other important stuff other that attending to lectures.
+ 
 # Lab 2 Part 2
 
 Pull Interactive Lab Hub updates to your repo.
