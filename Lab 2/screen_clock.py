@@ -116,6 +116,14 @@ while True:
         y += font.getsize(welcome)[1]
         draw.text((x,y), dayInfo, font = font, fill="FFFF00")
 
+    if not ButtonA.value and buttonB.value:
+        info = "Your classes are:"
+        y = top
+        draw.text((x, y), info, font=font, fill="#FFFFFF")
+        for i in calender[weekday]:
+            y += font.getsize(info)[1]
+            output = i[0] + " at " + i[1]
+            draw.text((x,y), output, font=font, fill="#FFFF00" )
 
     # Display image.
     disp.image(image, rotation)
