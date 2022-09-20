@@ -110,9 +110,9 @@ while True:
     backlight.value = True
     if buttonA.value and buttonB.value:
         image = Image.open("red.jpg")
-        backlight = digitalio.DigitalInOut(board.D22)
-        backlight.switch_to_output()
-        backlight.value = True
+        #backlight = digitalio.DigitalInOut(board.D22)
+        #backlight.switch_to_output()
+        #backlight.value = True
 
         # Scale the image to the smaller screen dimension
         image_ratio = image.width / image.height
@@ -133,7 +133,7 @@ while True:
         # welcome = "Welcome to CT Calender"
         # y = top
         # draw.text((x+width, y+width), welcome, font=font, fill=0)
-
+        print("none")
     if not buttonA.value and buttonB.value:
         draw.rectangle((0, 0, width, height), outline=0, fill=0)
         welcome = "Hello, today is " + weekDayName[weekday]
@@ -142,6 +142,7 @@ while True:
         draw.text((x, y), welcome, font=font, fill="#FFFFFF")
         y += font.getsize(welcome)[1]
         draw.text((x,y), dayInfo, font = font, fill="#FFFFFF")
+        print("A")
 
     if buttonA.value and not buttonB.value:
         draw.rectangle((0, 0, width, height), outline=0, fill=0)
@@ -152,14 +153,16 @@ while True:
             y += font.getsize(info)[1]
             output = i[0] + " at " + i[1]
             draw.text((x,y), output, font=font, fill="#FFFF00")
+        print("B")
+
 
     if not buttonA.value and not buttonB.value:
         draw.rectangle((0, 0, width, height), outline=0, fill=0)
         info = "Next classes is "
         for i in calender[weekday]:
-            tempTime = datetime.strptime(i[1])
-            tempTime.strftime('%H:%M')
-            now.strptime('%H:%M')
+            tempTime = datetime.datetime.strptime(i[1], '%H:%M')
+            #tempTime.strftime('%H:%M')
+            now.strftime('%H:%M')
             if tempTime > now:
                 info = info + i[0]
                 y = top
