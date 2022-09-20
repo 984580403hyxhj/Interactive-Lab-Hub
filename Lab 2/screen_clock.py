@@ -109,6 +109,23 @@ while True:
     weekday = now.weekday() + 1
     backlight.value = True
     if buttonA.value and buttonB.value:
+        image = Image.open("red.jpg")
+        image_ratio = image.width / image.height
+        screen_ratio = width / height
+        if screen_ratio < image_ratio:
+            scaled_width = image.width * height // image.height
+            scaled_height = height
+        else:
+            scaled_width = width
+            scaled_height = image.height * width // image.width
+        image = image.resize((scaled_width, scaled_height), Image.BICUBIC)
+
+        # Crop and center the image
+        x = scaled_width // 2 - width // 2
+        y = scaled_height // 2 - height // 2
+        image = image.crop((x, y, x + width, y + height))
+
+    if not buttonA.value and buttonB.value:
         welcome = "Hello, today is " + weekDayName[weekday]
         dayInfo = "You have " + str(len(calender[weekday])) + " classes"
         y = top
@@ -116,7 +133,7 @@ while True:
         y += font.getsize(welcome)[1]
         draw.text((x,y), dayInfo, font = font, fill="#FFFFFF")
 
-    if not buttonA.value and buttonB.value:
+    if buttonA.value and not buttonB.value:
         info = "Your classes are:"
         y = top
         draw.text((x, y), info, font=font, fill="#FFFFFF")
@@ -124,6 +141,9 @@ while True:
             y += font.getsize(info)[1]
             output = i[0] + " at " + i[1]
             draw.text((x,y), output, font=font, fill="#FFFF00")
+
+    if not buttonA.value and not buttonB.value:
+        pass
 
     # Display image.
     disp.image(image, rotation)
