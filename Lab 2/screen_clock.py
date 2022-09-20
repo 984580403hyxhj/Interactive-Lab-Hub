@@ -130,11 +130,12 @@ while True:
         y = scaled_height // 2 - height // 2
         image = image.crop((x, y, x + width, y + height))
 
-        welcome = "Welcome to CT Calender"
-        y = top
-        draw.text((x+width, y+width), welcome, font=font, fill=0)
+        # welcome = "Welcome to CT Calender"
+        # y = top
+        # draw.text((x+width, y+width), welcome, font=font, fill=0)
 
     if not buttonA.value and buttonB.value:
+        draw.rectangle((0, 0, width, height), outline=0, fill=0)
         welcome = "Hello, today is " + weekDayName[weekday]
         dayInfo = "You have " + str(len(calender[weekday])) + " classes"
         y = top
@@ -143,6 +144,7 @@ while True:
         draw.text((x,y), dayInfo, font = font, fill="#FFFFFF")
 
     if buttonA.value and not buttonB.value:
+        draw.rectangle((0, 0, width, height), outline=0, fill=0)
         info = "Your classes are:"
         y = top
         draw.text((x, y), info, font=font, fill="#FFFFFF")
@@ -152,6 +154,7 @@ while True:
             draw.text((x,y), output, font=font, fill="#FFFF00")
 
     if not buttonA.value and not buttonB.value:
+        draw.rectangle((0, 0, width, height), outline=0, fill=0)
         info = "Next classes is "
         for i in calender[weekday]:
             tempTime = datetime.strptime(i[1])
