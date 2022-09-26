@@ -2,6 +2,7 @@
 **NAMES OF COLLABORATORS HERE**
 
 Akhil Uddandam, au83@cornell.edu
+
 Jingze Xue, jx288
 
 [![Watch the video](https://user-images.githubusercontent.com/1128669/135009222-111fe522-e6ba-46ad-b6dc-d1633d21129c.png)](https://www.youtube.com/embed/Q8FWzLMobx0?start=19)
@@ -113,17 +114,26 @@ From a remote browser on the same network, check to make sure your webserver is 
 Storyboard and/or use a Verplank diagram to design a speech-enabled device. (Stuck? Make a device that talks for dogs. If that is too stupid, find an application that is better than that.) 
 
 \*\***Post your storyboard and diagram here.**\*\*
+![IMG_7E75F22800C9-1](https://user-images.githubusercontent.com/54753807/192398344-6329aede-d48b-4777-a507-a7ef435a5c6f.jpeg)
 
 Write out what you imagine the dialogue to be. Use cards, post-its, or whatever method helps you develop alternatives or group responses. 
 
 User: “I want to make hotpot Steve, what do I need?’
+
 Device: here is what you need for hotpot, hotpot sause, meat slice, and cabbage
+
 User: Great, I have those. How do I begin?
+
 Device: add a lot of water and the sause in the pot, let it heat for 10 minutes, until the water is boiling
+
 User: Okay, the water is boiling. Please remind me to check back in 10 minutes.
+
 Device:will remind you in ten minutes… beep beep beep, ten minutes reminder
+
 User: Thanks for the reminder, Steve. What do I do next?
+
 Device:Now, Add the cabbage, and the meet slice. Then wait for 5 more minutes, the hotpodt is ready
+
 User: Great. Thank you so much Steve. This looks delicious.
 
 
