@@ -141,7 +141,7 @@ while True:
         y += font.getsize(welcome)[1]
         draw.text((x,y), "Time:"+str(now), font=font, fill="#FFFFFF")
         y += font.getsize(welcome)[1]
-        draw.text((x, y), "You've attended " + score + "lectures", font=font, fill="#FFFFFF")
+        draw.text((x, y), "You've attended " + str(score) + "lectures", font=font, fill="#FFFFFF")
         y += font.getsize(welcome)[1]
         draw.text((x, y), "Great Job!", font=font, fill="#F0F0FF")
         #print("none")
