@@ -134,16 +134,16 @@ while True:
         # x = scaled_width // 2 - width // 2
         # y = scaled_height // 2 - height // 2
         # image = image.crop((x, y, x + width, y + height))
-        # draw.rectangle((0, 0, width, height), outline=0, fill=0)
-        # welcome = "Welcome to CT Calender"
-        # y = top
-        # draw.text((x, y), welcome, font=font, fill="#FFFFFF")
-        # y += font.getsize(welcome)[1]
-        # draw.text((x,y), "Time:"+str(now), font=font, fill="#FFFFFF")
-        # y += font.getsize(welcome)[1]
-        # draw.text((x, y), "You've attended " + score + "lectures", font=font, fill="#FFFFFF")
-        # y += font.getsize(welcome)[1]
-        # draw.text((x, y), "Great Job!", font=font, fill="#F0F0FF")
+        draw.rectangle((0, 0, width, height), outline=0, fill=0)
+        welcome = "Welcome to CT Calender"
+        y = top
+        draw.text((x, y), welcome, font=font, fill="#FFFFFF")
+        y += font.getsize(welcome)[1]
+        draw.text((x,y), "Time:"+str(now), font=font, fill="#FFFFFF")
+        y += font.getsize(welcome)[1]
+        draw.text((x, y), "You've attended " + score + "lectures", font=font, fill="#FFFFFF")
+        y += font.getsize(welcome)[1]
+        draw.text((x, y), "Great Job!", font=font, fill="#F0F0FF")
         #print("none")
         pass
     if not buttonA.value and buttonB.value:
