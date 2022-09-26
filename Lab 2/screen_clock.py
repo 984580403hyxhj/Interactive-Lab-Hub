@@ -143,7 +143,7 @@ while True:
         y += font.getsize(welcome)[1]
         draw.text((x, y), "You've attended " + str(score) + "lectures", font=font, fill="#FFFFFF")
         y += font.getsize(welcome)[1]
-        draw.text((x, y), "Great Job!", font=font, fill="#F0F0FF")
+        draw.text((x, y), "Great Job!", font=font, fill="#00FFFF")
         #print("none")
         pass
     if not buttonA.value and buttonB.value:
