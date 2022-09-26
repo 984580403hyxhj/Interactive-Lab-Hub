@@ -178,7 +178,7 @@ while True:
                 have_class = False
                 info = info + i[0]
                 y = top
-                draw.text((x, y), output, font=font, fill="#FFFFFF")
+                draw.text((x, y), info, font=font, fill="#FFFFFF")
                 minute_gap = class_minute - minute
                 if minute_gap < 0:
                     minute_gap = 60 + minute_gap
