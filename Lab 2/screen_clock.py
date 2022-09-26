@@ -72,7 +72,7 @@ calender = {1 : [("VR/AR", ["9:40","11:00"]), ("PSYsocial", ["11:25","12:40"]), 
             4 : [("idd", ["8:20","9:30"]), ("AML", ["13:00","14:15"])],
             5 : [],
             6 : [],
-            7 : [("idd", ["8:20","9:30"]), ("AML", ["13:00","14:15"]), ("Test",["23:00","23:59"])]
+            7 : []
             }
 
 weekDayName = {
@@ -183,7 +183,7 @@ while True:
                     minute_gap = 60 + minute_gap
                     class_hour -= 1
                 hour_gap = class_hour - hour
-                info = "You have " + str(hour_gap) + "h" + str(minute_gap) + "m"
+                info = "You still have " + str(hour_gap) + "h" + str(minute_gap) + "m"
                 y += font.getsize(info)[1]
                 color = "#0000FF"
                 if hour_gap < 1:
