@@ -139,8 +139,9 @@ while True:
         pass
     if not buttonA.value and buttonB.value:
         draw.rectangle((0, 0, width, height), outline=0, fill=0)
-        welcome = "Hello, today is " + weekDayName[weekday]
-        dayInfo = "You have " + str(len(calender[weekday])) + " classes"
+        print(calender)
+        welcome = "Hello, today is " + weekDayName[weekday-1]
+        dayInfo = "You have " + str(len(calender[weekday-1])) + " classes"
         y = top
         draw.text((x, y), welcome, font=font, fill="#FFFFFF")
         y += font.getsize(welcome)[1]
