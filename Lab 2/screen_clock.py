@@ -183,7 +183,7 @@ while True:
                     minute_gap = 60 + minute_gap
                     class_hour -= 1
                 hour_gap = class_hour - hour
-                info = "You have " + str(hour_gap) + " hours and " + str(minute_gap) + " minutes"
+                info = "You have " + str(hour_gap) + "h" + str(minute_gap) + "m"
                 y += font.getsize(info)[1]
                 color = "#0000FF"
                 if hour_gap < 1:
