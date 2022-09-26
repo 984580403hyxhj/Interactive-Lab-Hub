@@ -1,5 +1,9 @@
-# Chatterboxes
+
 **NAMES OF COLLABORATORS HERE**
+
+Akhil Uddandam, au83@cornell.edu
+Jingze Xue, jx288
+
 [![Watch the video](https://user-images.githubusercontent.com/1128669/135009222-111fe522-e6ba-46ad-b6dc-d1633d21129c.png)](https://www.youtube.com/embed/Q8FWzLMobx0?start=19)
 
 In this lab, we want you to design interaction with a speech-enabled device--something that listens and talks to you. This device can do anything *but* control lights (since we already did that in Lab 1).  First, we want you first to storyboard what you imagine the conversational interaction to be like. Then, you will use wizarding techniques to elicit examples of what people might say, ask, or respond.  We then want you to use the examples collected from at least two other people to inform the redesign of the device.
@@ -56,7 +60,10 @@ Now, you might wonder what exactly is a `.sh` file? Typically, a `.sh` file is a
 You can also play audio files directly with `aplay filename`. Try typing `aplay lookdave.wav`.
 
 \*\***Write your own shell file to use your favorite of these TTS engines to have your Pi greet you by name.**\*\*
+
 (This shell file should be saved to your own repo for this lab.)
+https://github.com/984580403hyxhj/Interactive-Lab-Hub/blob/Fall2022/Lab%203/my_text_to_speech.sh
+https://youtube.com/shorts/8eZ6nFbNR-0?feature=share
 
 Bonus: If this topic is very exciting to you, you can try out this new TTS system we recently learned about: https://github.com/rhasspy/larynx
 
@@ -80,6 +87,8 @@ Now, look at which camera you have. Do you have the cylinder camera (likely the 
 Then try `./vosk_demo_mic.sh`
 
 \*\***Write your own shell file that verbally asks for a numerical based input (such as a phone number, zipcode, number of pets, etc) and records the answer the respondent provides.**\*\*
+https://github.com/984580403hyxhj/Interactive-Lab-Hub/blob/Fall2022/Lab%203/ask_phone_num.sh
+https://youtube.com/shorts/5IlWVPzUXFc?feature=share
 
 ### Serving Pages
 
@@ -107,13 +116,30 @@ Storyboard and/or use a Verplank diagram to design a speech-enabled device. (Stu
 
 Write out what you imagine the dialogue to be. Use cards, post-its, or whatever method helps you develop alternatives or group responses. 
 
+User: “I want to make hotpot Steve, what do I need?’
+Device: here is what you need for hotpot, hotpot sause, meat slice, and cabbage
+User: Great, I have those. How do I begin?
+Device: add a lot of water and the sause in the pot, let it heat for 10 minutes, until the water is boiling
+User: Okay, the water is boiling. Please remind me to check back in 10 minutes.
+Device:will remind you in ten minutes… beep beep beep, ten minutes reminder
+User: Thanks for the reminder, Steve. What do I do next?
+Device:Now, Add the cabbage, and the meet slice. Then wait for 5 more minutes, the hotpodt is ready
+User: Great. Thank you so much Steve. This looks delicious.
+
+
+
+
 \*\***Please describe and document your process.**\*\*
+
+Our device, Steve, gives the user instructions on how to cook popular dishes. When asked, the devices interact with the user by listing out the required ingredients for cooking. After confirming with the user that all the ingredients are available, the device begins instructing the user step by step on how to cook the dish, even setting alarms or reminders to completion. 
 
 ### Acting out the dialogue
 
 Find a partner, and *without sharing the script with your partner* try out the dialogue you've designed, where you (as the device designer) act as the device you are designing.  Please record this interaction (for example, using Zoom's record feature).
 
 \*\***Describe if the dialogue seemed different than what you imagined when it was acted out, and how.**\*\*
+https://youtube.com/shorts/HyjFpaaj6jE?feature=share
+
 
 ### Wizarding with the Pi (optional)
 In the [demo directory](./demo), you will find an example Wizard of Oz project. In that project, you can see how audio and sensor data is streamed from the Pi to a wizard controller that runs in the browser.  You may use this demo code as a template. By running the `app.py` script, you can see how audio and sensor data (Adafruit MPU-6050 6-DoF Accel and Gyro Sensor) is streamed from the Pi to a wizard controller that runs in the browser `http://<YouPiIPAddress>:5000`. You can control what the system says from the controller as well!
@@ -161,4 +187,5 @@ Answer the following:
 ### How could you use your system to create a dataset of interaction? What other sensing modalities would make sense to capture?
 
 \*\**your answer here*\*\*
+
 
