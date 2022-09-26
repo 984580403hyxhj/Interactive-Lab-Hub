@@ -166,7 +166,7 @@ while True:
     if not buttonA.value and not buttonB.value:
         draw.rectangle((0, 0, width, height), outline=0, fill=0)
         info = "Next classes is "
-        have_class = True if len(calender[weekday]) > 0 else False
+        have_class = False
         for i in calender[weekday]:
             tempTime = datetime.datetime.strptime(i[1][0], '%H:%M')
             class_hour = tempTime.hour
@@ -174,7 +174,7 @@ while True:
             hour = now.hour
             minute = now.minute
             if class_hour > hour or class_hour == hour and class_minute > minute:
-                have_class = False
+                have_class = True
                 info = info + i[0]
                 y = top
                 draw.text((x, y), info, font=font, fill="#FFFFFF")
