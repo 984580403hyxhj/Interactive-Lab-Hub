@@ -69,7 +69,10 @@ buttonB.switch_to_input()
 calender = {1 : [("VR/AR", "9:40"), ("PSYsocial", "11:00"), ("HCI", "13:00")],
             2 : [("idd", "8:20"), ("AML", "13:00")],
             3 : [("VR/AR", "9:40"), ("PSYsocial", "11:00"), ("HCI", "13:00")],
-            4 : [("idd", "8:20"), ("AML", "13:00")]
+            4 : [("idd", "8:20"), ("AML", "13:00")],
+            5 : [],
+            6 : [],
+            7 : []
             }
 
 weekDayName = {
@@ -140,8 +143,8 @@ while True:
     if not buttonA.value and buttonB.value:
         draw.rectangle((0, 0, width, height), outline=0, fill=0)
         print(calender)
-        welcome = "Hello, today is " + weekDayName[weekday-1]
-        dayInfo = "You have " + str(len(calender[weekday-1])) + " classes"
+        welcome = "Hello, today is " + weekDayName[weekday]
+        dayInfo = "You have " + str(len(calender[weekday])) + " classes"
         y = top
         draw.text((x, y), welcome, font=font, fill="#FFFFFF")
         y += font.getsize(welcome)[1]
