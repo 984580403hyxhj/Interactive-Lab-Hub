@@ -66,13 +66,13 @@ buttonA.switch_to_input()
 buttonB.switch_to_input()
 
 
-calender = {1 : [("VR/AR", "9:40"), ("PSYsocial", "11:00"), ("HCI", "13:00")],
-            2 : [("idd", "8:20"), ("AML", "13:00")],
-            3 : [("VR/AR", "9:40"), ("PSYsocial", "11:00"), ("HCI", "13:00")],
-            4 : [("idd", "8:20"), ("AML", "13:00")],
+calender = {1 : [("VR/AR", ["9:40","11:00"]), ("PSYsocial", ["11:25","12:40"]), ("HCI", ["13:00","14:15"])],
+            2 : [("idd", ["8:20","9:30"]), ("AML", ["13:00","14:15"])],
+            3 : [("VR/AR", ["9:40","11:00"]), ("PSYsocial", ["11:25","12:40"]), ("HCI", ["13:00","14:15"])],
+            4 : [("idd", ["8:20","9:30"]), ("AML", ["13:00","14:15"])],
             5 : [],
             6 : [],
-            7 : []
+            7 : [("idd", ["8:20","9:30"]), ("AML", ["13:00","14:15"]), ("Test",["23:00","23:59"])]
             }
 
 weekDayName = {
@@ -158,7 +158,7 @@ while True:
         draw.text((x, y), info, font=font, fill="#FFFFFF")
         for i in calender[weekday]:
             y += font.getsize(info)[1]
-            output = i[0] + " at " + i[1]
+            output = i[0] + " from " + i[1][0] + " to " + i[1][1]
             draw.text((x,y), output, font=font, fill="#FFFF00")
         print("B")
 
@@ -168,7 +168,7 @@ while True:
         info = "Next classes is "
         have_class = False
         for i in calender[weekday]:
-            tempTime = datetime.datetime.strptime(i[1], '%H:%M')
+            tempTime = datetime.datetime.strptime(i[1][0], '%H:%M')
             class_hour = tempTime.hour
             class_minute = tempTime.minute
             hour = now.hour
@@ -186,11 +186,15 @@ while True:
                 hour_gap = class_hour - hour
                 info = "You have " + hour_gap + " hours and " + minute_gap + " minutes"
                 y += font.getsize(info)[1]
-                draw.text((x,y), info, font=font, fill="#FFFF00")
+                color = "#0000FF"
+                if hour_gap < 1:
+                    color = "#FF0000"
+                draw.text((x,y), info, font=font, fill=color)
                 break
         print(have_class)
         if not have_class:
             draw.text((x,y), "You have no class! Enjoy!", font=font, fill="#00FF00")
+
     # Display image.
     disp.image(image, rotation)
     time.sleep(1)
