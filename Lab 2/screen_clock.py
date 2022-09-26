@@ -85,6 +85,8 @@ weekDayName = {
     7 : "Sunday"
 }
 
+score = 0
+
 while True:
     # Draw a black filled box to clear the image.
     draw.rectangle((0, 0, width, height), outline=0, fill=0)
@@ -138,6 +140,10 @@ while True:
         draw.text((x, y), welcome, font=font, fill="#FFFFFF")
         y += font.getsize(welcome)[1]
         draw.text((x,y), "Time:"+str(now), font=font, fill="#FFFFFF")
+        y += font.getsize(welcome)[1]
+        draw.text((x, y), "You've attended " + score + "lectures", font=font, fill="#FFFFFF")
+        y += font.getsize(welcome)[1]
+        draw.text((x, y), "Great Job!", font=font, fill="#F0F0FF")
         #print("none")
         pass
     if not buttonA.value and buttonB.value:
@@ -184,6 +190,7 @@ while True:
                     class_hour -= 1
                 hour_gap = class_hour - hour
                 info = "You still have " + str(hour_gap) + "h" + str(minute_gap) + "m"
+                score += 1
                 y += font.getsize(info)[1]
                 color = "#0000FF"
                 if hour_gap < 1:
