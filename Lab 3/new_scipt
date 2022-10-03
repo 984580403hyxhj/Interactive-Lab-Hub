@@ -1,0 +1,13 @@
+echo "Sure, just to be clear, you mean hotpot correct" | festival --tts
+echo "Great, I am making your guide, would you like to hear a joke" | festival --tts
+echo "What is the best thing about Switzerland?" | festival --tts
+echo "I do not know, but the flag is a big plus." | festival --tts
+echo "Your Guide is ready, Would you like to hear it?" | festival --tts
+echo "If you have any question, you can use the camera to ask questions" | festival --tts
+echo "here is what you need for hotpot, hotpot sause, meat slice, and cabbage, tell me when you are ready" | festival --tts
+echo "add a lot of water and the sause in the pot, let it heat for 10 minutes, until the water is boiling" | festival --tts
+echo "It look good" | festival --tts
+echo "will remind you in ten minutes… beep beep beep, ten minutes reminder" | festival --tts
+echo "Now, Add the cabbage, and the meet slice. Then wait for 5 more minutes, the hotpodt is ready" | festival --tts
+echo "Enjoy your meal" | festival --tts
+echo "Now, Add the cabbage, and the meet slice. Then wait for 5 more minutes, the hotpodt is ready" | festival --tts
