@@ -180,11 +180,13 @@ To enhance our user interactions, we will also be using webcams while complement
 Script:
 
  
+![IDD_lab3](https://user-images.githubusercontent.com/54753807/193696374-47293004-0f15-4fb9-8a49-125416d6511b.jpg)
 
 *Above is the flowchart or decision tree we modeled our system to follow. This is a revised interaction map to our part 1 prototype and includes a complete interaction diagram.
 
 Storyboard:
 
+![IMG_E2C35B33369D-1](https://user-images.githubusercontent.com/54753807/193696388-543340f9-ad89-4af8-94b9-861597bfe236.jpeg)
 
 
 ## Prototype your system
@@ -197,6 +199,7 @@ The system should:
 
 *Document how the system works*
 *Include videos or screencaptures of both the system and the controller.*
+![IMG_7202](https://user-images.githubusercontent.com/54753807/193696463-1b6ca4f8-d235-4692-a410-7084fbc279ca.jpg)
 
 To enable this interaction, we used the raspberry pi as our computer and the webcam to output speech as well as input visual information. We used a flowchart to map the computer interaction with the user’s input and guide the conversation. The device will recognize user voice input, and return a desired cooking recipe. Users can use the webcam to seek additional help.
 
