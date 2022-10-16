@@ -1,7 +1,7 @@
 # Ph-UI!!!
 
-**NAMES OF COLLABORATORS HERE**
-
+Akhil Uddandam
+Steve Xue
 
 For lab this week, we focus both on sensing, to bring in new modes of input into your devices, as well as prototyping the physical look and feel of the device. You will think about the physical form the device needs to perform the sensing as well as present the display or feedback about what was sensed. 
 
@@ -176,61 +176,124 @@ Usually, sensors need to positioned in specific locations or orientations to mak
 
 **\*\*\*Draw 5 sketches of different ways you might use your sensor, and how the larger device needs to be shaped in order to make the sensor useful.\*\*\***
 
-**\*\*\*What are some things these sketches raise as questions? What do you need to physically prototype to understand how to anwer those questions?\*\*\***
+
+
+
+
+
+
+
+
+
+**\*\*\*What are some things these sketches raise as questions? What do you need to physically prototype to understand how to answer those questions?\*\*\***
+
+Idea 1:
+The touch sensor that senses when the user, who is on a diet and refraining from the loaded sugary foods in the fridge, touches the fridge knob and promptly responds with warning messages!
+![IMG_922A2BD49C77-1](https://user-images.githubusercontent.com/54753807/196012490-68d49b4e-5110-4363-b1bb-ef1f74f82c00.jpeg)
+
+
+Question 1: How do we place our sensor so that it won’t impair the appearance of the fridge
+Question 2: How do need find a good eating time for each person, and everyone is different
+
+I think we have to try to place the sensor in different places of the fridge to see where is the least intrusive way to put our sensor without damaging the appearance of the fridge. We also need to do a lot of contextual inquiry to many users with a health professional to come up with a algorithm to find out the best eating time for different user.
+
+Idea 2
+We use the distance sensor to give interactive warnings to users who are moving around while using the Quest 2 VR headset. This sensor will interact with the user by promptly outputting a warning buzzer sound when the user is within 3 feet of an object. 
+![IMG_20BCFB1E8EF6-1](https://user-images.githubusercontent.com/54753807/196012493-6b815fae-8d55-465c-b681-6aa0aa0bc8d4.jpeg)
+
+Question 1: Where is a good position for users to wear it so it is comfortable.
+Question 2: Is the sensor protected? How do we prevent it from exposing to physical damage?
+Question 3: What area around the user is this sensor detecting? Is it really helpful, will it missing some area?
+Question 4: What is the good threshold to alarm the user?
+
+We can try different forms of the device, and try it on different positions of the user’s body to find out the area it is detecting.
+
+
+
+Idea 3:
+We use the rotary sensor to provide feedback to the user on the angular rotation and speed that the window blinds are rotating.
+![IMG_D2B3CB6E4F93-1](https://user-images.githubusercontent.com/54753807/196012495-e19a9c59-be94-470b-b98b-a694abcd7260.jpeg)
+
+Question 1: Where do we put the rotary sensor so the user can reach it while lying on bed?
+Question 2: What is the equation mapping the rotary sensor to the blinds’ position? Should it be linear or some other equation?
+Question 3: What feedback should we give to the user except moving the blinds.
+
+We can try to put the sensor in different location, and try out different mapping equations, and try out different interactions to send feedback to the user(haptic feedback on the button, voice, vibration, etc)
+
+Idea 4:
+Using the joystick as an interactive device to control user movements in an interactive FPS video game. 
+![IMG_1B187E335C3F-1](https://user-images.githubusercontent.com/54753807/196012503-b42721cb-31aa-4466-a60b-78c1c8c6a867.jpeg)
+
+Question 1: What is the sensitivity of the cursor movement
+Question 2: Can we add more feedback on the controller
+Question 3: How do we place the joystick so that it won’t be damaged by user
+
+We can detach the joystick from the motherboard, and make the joystick changeable. We also need to test different cursor movement, and try other interaction to give better experience(haptic feedback is pretty good on FPS games)
+
+Idea 5:
+Use the light sensor to warn the user of when he has stepped out of the well lit up “gaming environment” when using the Quest 2 VR headset. The sensor will detect when the user has stepped out into the dark and promptly respond with a warning feedback indicating to the user to return. Furthermore, it will also interact with the user by warning him that he is close to stepping out of bounds. 
+![IMG_986DA6618D42-1](https://user-images.githubusercontent.com/54753807/196012506-2ee614c9-5e56-464e-abdf-75cd8c01ab38.jpeg)
+
+Question 1: How to choose the right area to limit user’s safe area
+Question 2: Where do we put the sensor so that it can detect more information and give feedback to the user
+
+We can put the device in different positions both on the users, and in other areas.
 
 **\*\*\*Pick one of these designs to prototype.\*\*\***
 
+We chose our second idea to prototype:
+The main purpose behind this interactive device is to use the distance sensor to give interactive warnings to users who are moving around while using the Quest 2 VR headset. This sensor will interact with the user by promptly outputting a warning buzzer sound when the user is within 3 feet of an object. 
+![IMG_7242](https://user-images.githubusercontent.com/54753807/196012534-c36372a2-755e-471c-a032-c48bd97ae956.jpg)
+
+
+After experimenting , we decided to put the device behind the user’s back, as it was less intrusive(the belly area is more sensitive than the back) and the Quest 2 VR has a visual sensor in the front. Furthermore,  it provides more information and less error (users can reach their hand forward and get in the way of the sensor, and have nothing behind them). Thus putting it behind provides more important information to enrich the user experience.
+
+There is a video showing how you walk with it:
+https://youtube.com/shorts/fKDY5vf9bCs?feature=share
 
 ### Part D
-### Physical considerations for displaying information and housing parts
 
-
-Here is an Pi with a paper faceplate on it to turn it into a display interface:
-
-<img src="https://github.com/FAR-Lab/Developing-and-Designing-Interactive-Devices/blob/2020Fall/images/paper_if.png?raw=true"  width="250"/>
-
-
-This is fine, but the mounting of the display constrains the display location and orientation a lot. Also, it really only works for applications where people can come and stand over the Pi, or where you can mount the Pi to the wall.
-
-Here is another prototype for a paper display:
-
-<img src="https://github.com/FAR-Lab/Developing-and-Designing-Interactive-Devices/blob/2020Fall/images/b_box.png?raw=true"  width="250"/>
-
-Your kit includes these [SparkFun Qwiic OLED screens](https://www.sparkfun.com/products/17153). These use less power than the MiniTFTs you have mounted on the GPIO pins of the Pi, but, more importantly, they can be more flexibily be mounted elsewhere on your physical interface. The way you program this display is almost identical to the way you program a  Pi display. Take a look at `oled_test.py` and some more of the [Adafruit examples](https://github.com/adafruit/Adafruit_CircuitPython_SSD1306/tree/master/examples).
-
-<p float="left">
-<img src="https://cdn.sparkfun.com//assets/parts/1/6/1/3/5/17153-SparkFun_Qwiic_OLED_Display__0.91_in__128x32_-01.jpg" height="200" />
-<img src="https://cdn.discordapp.com/attachments/679466987314741338/823354087105101854/PXL_20210322_003033073.jpg" height="200">
-</p>
-
-
-It holds a Pi and usb power supply, and provides a front stage on which to put writing, graphics, LEDs, buttons or displays.
-
-This design can be made by scoring a long strip of corrugated cardboard of width X, with the following measurements:
-
-| Y height of box <br> <sub><sup>- thickness of cardboard</sup></sub> | Z  depth of box <br><sub><sup>- thickness of cardboard</sup></sub> | Y height of box  | Z  depth of box | H height of faceplate <br><sub><sup>* * * * * (don't make this too short) * * * * *</sup></sub>|
-| --- | --- | --- | --- | --- | 
-
-Fold the first flap of the strip so that it sits flush against the back of the face plate, and tape, velcro or hot glue it in place. This will make a H x X interface, with a box of Z x X footprint (which you can adapt to the things you want to put in the box) and a height Y in the back. 
-
-Here is an example:
-
-<img src="https://github.com/FAR-Lab/Developing-and-Designing-Interactive-Devices/blob/2020Fall/images/horoscope.png?raw=true"  width="250"/>
-
-Think about how you want to present the information about what your sensor is sensing! Design a paper display for your project that communicates the state of the Pi and a sensor. Ideally you should design it so that you can slide the Pi out to work on the circuit or programming, and then slide it back in and reattach a few wires to be back in operation.
  
 **\*\*\*Sketch 5 designs for how you would physically position your display and any buttons or knobs needed to interact with it.\*\*\***
+![ff14-18](https://user-images.githubusercontent.com/54753807/196012547-0a9b9e69-f244-49f1-b3b8-89394a73364e.jpg)
+![IMG_DDF71BF55E75-1](https://user-images.githubusercontent.com/54753807/196012548-6b146505-9516-496a-9170-66d7e9c727e0.jpeg)
 
-**\*\*\*What are some things these sketches raise as questions? What do you need to physically prototype to understand how to anwer those questions?\*\*\***
+
+**The display feedback from the sensors will be shown in the Users Quest 2 VR OS. It will show a dialog box with insightful information/feedback as well as an auditory warning.**
+
+**\*\*\*What are some things these sketches raise as questions? What do you need to physically prototype to understand how to answer those questions?\*\*\***
+
+
+Question 1: When connecting the pi to different sensors, how do we protect the cable from potential damage?
+Question 2: What is the threshold to display the message
+Question 3: We have two sensors, if both sensor are detecting potential danger(detect close object and at the edge of safe zone), which message should take the priority
+Question 4: How do we merge multiple sensor data streams in a way that effectively provides interactive feedback for the user.
+
+To better gauge our design, we will need to create a mini obstacle detection course for the device to test its sensor functionality and observe just how well both sensor types work together in providing valuable interaction with the user and his environment. 
+
 
 **\*\*\*Pick one of these display designs to integrate into your prototype.\*\*\***
+The light sensor and distance sensors will be our primary devices to enrich our user experience and interactions. 
+![IMG_7245](https://user-images.githubusercontent.com/54753807/196012555-b5d418c1-cb33-4c30-94c9-fb825c593d79.jpg)
+![IMG_7246](https://user-images.githubusercontent.com/54753807/196012556-f6807691-2ca0-46a0-9eab-c7155a2f8227.jpg)
+![IMG_7247](https://user-images.githubusercontent.com/54753807/196012557-aee032f6-9140-4995-89ce-cb6c95ec698d.jpg)
+![IMG_7248](https://user-images.githubusercontent.com/54753807/196012564-5b32c297-ad17-4b55-8be9-72c2cc9a7e7d.jpg)
+![IMG_7249](https://user-images.githubusercontent.com/54753807/196012567-23f48896-f024-4897-a990-e07fca4fd149.jpg)
+
 
 **\*\*\*Explain the rationale for the design.\*\*\*** (e.g. Does it need to be a certain size or form or need to be able to be seen from a certain distance?)
 
-Build a cardbord prototype of your design.
+The main objective behind our devices is to provide a safe experience for a Quest 2 VR user who is blinded from the device. By providing a distance and light sensor, the device is able to be an “interactive eye” to the user by providing a running warning with distance measurements when the user is within 3 feet of an object. Similarly, we can mark up the user's environment with red tape on the ground and lit up the surroundings so that when the user exits the “safe zones”, they will be warned and can interact accordingly by navigating back. The display we used will be the VR headset, as the user will not be able to look at other screens while using it. The warning display will show in the headset display. 
+
+**The display feedback from the sensors will be shown in the Users Quest 2 VR OS. It will show a dialog box with insightful information/feedback as well as an auditory warning.**
+
+
+Build a cardboard prototype of your design.
 
 **\*\*\*Document your rough prototype.\*\*\***
 
+This is a video showing the final interaction
+https://youtu.be/sUQUMoJSgdo
 
 LAB PART 2
 
@@ -274,4 +337,23 @@ Document all the prototypes and iterations you have designed and worked on! Agai
 * "Looks like": shows how the device should look, feel, sit, weigh, etc.
 * "Works like": shows what the device can do
 * "Acts like": shows how a person would interact with the device
+Iteration 1:
+In our past design, the distance sensor only faced one direction. Therefore, it only detected objects at a certain angle. In this iteration, we decided to better our design by letting the user hold a joystick which can change the angle of the sensor using the servo.
+![IMG_9503002D8C76-1](https://user-images.githubusercontent.com/54753807/196012594-d22e0fad-fc18-4c3a-a770-0f30a87e3534.jpeg)
 
+Question 1: What is the limit of servo to place the sensor
+Question 2: When the servo hits the limit angle, what feedback should we give to the user.
+
+We have to have a mapping function, and test different feedback(vibration, visual warning) on our users.
+
+Iteration 2:
+We simply add one more feature of the joystick, when the user presses the joystick, the servo will automatically sweep up and down to provide a wider range for the sensor. 
+
+Question 1: When the sensor is sweeping, what should the visual alarm display? The distance will be constantly changing, and it will be hard for users to understand.
+
+Conclusion:
+Looks like: Our product should be minimalist in design yet provide accurate readings for the user interaction. Ideally it should look very simple and be light weight. Also, it should feel reliable and safe to the user. Which means, it has to provide sufficient feedback and interaction to the user to enrich his/hers VR experience. 
+
+Works like: As it works much like a guard, it will display object and location information/warning to the user while they are blinded by the Quest 2 VR set, and ensure the users safety and trust in their overall VR experience.
+
+Acts like: The interaction between the device and the user should also be minimalistic, because it is designed to be used while wearing a VR headset. Ideally, the user should be able to tell they are interacting with the device but also benefit from the information it provides.
