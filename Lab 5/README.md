@@ -102,6 +102,15 @@ pi@ixe00:~/openCV-examples/object-detection $ python detect.py
 
 **\*\*\*Try each of the following four examples in the `openCV-examples`, include screenshots of your use and write about one design for each example that might work based on the individual benefits to each algorithm.\*\*\***
 
+Contour detection: you can use contour detection to see the dimensions of door and whether an object will fit inside those parameters
+
+Face detection: Identify people and their faces in a park or large community setting
+
+Flow detection: Identify the movements and follow through of a basketball player when executing his shot
+
+Object detection: Self driving cars using object detection.
+
+
 #### Filtering, FFTs, and Time Series data. 
 Additional filtering and analysis can be done on the sensors that were provided in the kit. For example, running a Fast Fourier Transform over the IMU or Microphone data stream could create a simple activity classifier between walking, running, and standing.
 
@@ -139,6 +148,7 @@ For technical references:
 
 
 **\*\*\*Include links to your code here, and put the code for these in your repo--they will come in handy later.\*\*\***
+https://github.com/984580403hyxhj/Interactive-Lab-Hub/blob/Fall2022/Lab%205/ExampleAudioFFT.py
 
 ### (Optional Reading) Introducing Additional Concepts
 The following sections ([MediaPipe](#mediapipe) and [Teachable Machines](#teachable-machines)) are included for your own optional learning. **The associated scripts will not work on Fall 2022's Pi Image, so you can move onto part B.** However, you are welcome to try it on your personal computer. If this functionality is desirable for your lab or final project, we can help you get a different image running the last OS and version of python to make the following code work.
@@ -223,27 +233,56 @@ This might take a while to get fully installed. After installation, connect your
 ### Construct a simple interaction.
 
 * Pick one of the models you have tried, and experiment with prototyping an interaction.
-* This can be as simple as the boat detector showen in a previous lecture from Nikolas Matelaro.
+* This can be as simple as the boat detector shown in a previous lecture from Nikolas Matelaro.
 * Try out different interaction outputs and inputs.
 * Fill out the ``Contextual Interaction Design Tool`` sheet.[Found here.](ThinkingThroughContextandInteraction.png)
 
 **\*\*\*Describe and detail the interaction, as well as your experimentation here.\*\*\***
+Context:
+Who is involved:
+The user(blind person)
+What is making noises:
+An interactive device that gives a feedback to the user 
+When:
+When the device detect an moving or idle object within 2 feet of the user
+Where:
+Environment around the user surroundings up to 10 feet
+
+Presence:
+Task Goal:
+The device should be able to quickly read data and accurately detect objects and alert the user if an object is within their immediate vicinity. 
+
+
+
+Interaction:
+The device is designed to help blind people to sense the objects in the environment around them and safely navigate their surroundings with the help of computer visions. When it detects an object within a threshold (2 feet) , it will warn the user with a ring to move around the object in their close vicinity. The closer the object gets to the user, the louder the sound it makes to avoid collision. 
 
 ### Part C
 ### Test the interaction prototype
 
 Now flight test your interactive prototype and **note down your observations**:
 For example:
-1. When does it what it is supposed to do?
-1. When does it fail?
-1. When it fails, why does it fail?
-1. Based on the behavior you have seen, what other scenarios could cause problems?
+1. When does it do what it is supposed to do?
+	When the user is navigating around a crowded area, the device will indic
+2. When does it fail?
+Sometimes, the algorithm fails to detect an object in time or at all for the user to react accordingly. Alternatively, if there are too many objects in the way, the device might have trouble detecting all of them simultaneously. When there are input noises that are not important data points for the user to consider when navigating such as a leaf in the user's way versus a truck. Obviously, the leaf is negligible and the truck is not. 
+
+3. When it fails, why does it fail?
+	The device can fail in interpreting and evaluating the importance of the detected object to the blind user when walking. Also, failure can also occur when the device does not detect an object at all or in time to alert the user. Furthermore, when there are multiple objects in the user's environment, the device might not be able to process all the objects effectively. 
+
+4. Based on the behavior you have seen, what other scenarios could cause problems?
+	When the scenario needs speed, the system wouldn’t work because of the latency.
+	
 
 **\*\*\*Think about someone using the system. Describe how you think this will work.\*\*\***
 1. Are they aware of the uncertainties in the system?
-1. How bad would they be impacted by a miss classification?
-1. How could change your interactive system to address this?
-1. Are there optimizations you can try to do on your sense-making algorithm.
+	No, since the intended users are blind people, we don’t have any visual cue for them to know the uncertainties.
+2. How bad would they be impacted by a miss classification?
+	Depends on the scenarios, if a person is using it in traffic, the consequence could be really bad
+3. How could change your interactive system to address this?
+	We think we can detect the scenario, if there are a lot of moving object, we can simple tell the person the device is at its limit, and stop providing service.
+4. Are there optimizations you can try to do on your sense-making algorithm.
+	We can filter out the unimportant object, and can probably filter out 90% of the video(we don’t need the ground, sky), we can just use the algorithm on objects that are important, and that will impede the user's movement.
 
 ### Part D
 ### Characterize your own Observant system
@@ -251,12 +290,18 @@ For example:
 Now that you have experimented with one or more of these sense-making systems **characterize their behavior**.
 During the lecture, we mentioned questions to help characterize a material:
 * What can you use X for?
+	Blind people in a crowded area or in a dangerous environment.
 * What is a good environment for X?
+	Indoor environments as detections are more predictable and manageable in cases of error and rearranging (furniture etc).
 * What is a bad environment for X?
+	Outdoor environments as the user cannot change the environment to suit their needs and the consequences of running into this can be dangerous for the user. 
+	
 * When will X break?
+	When their are too many objects in the way for the device to detect 
 * When it breaks how will X break?
 * What are other properties/behaviors of X?
 * How does X feel?
+	
 
 **\*\*\*Include a short video demonstrating the answers to these questions.\*\*\***
 
@@ -265,3 +310,4 @@ During the lecture, we mentioned questions to help characterize a material:
 Following exploration and reflection from Part 1, finish building your interactive system, and demonstrate it in use with a video.
 
 **\*\*\*Include a short video demonstrating the finished result.\*\*\***
+
