@@ -273,7 +273,8 @@ The device is designed to help blind people to sense the objects in the environm
 Now flight test your interactive prototype and **note down your observations**:
 For example:
 1. When does it do what it is supposed to do?
-	When the user is navigating around a crowded area, the device will indic
+	When the user is navigating around a crowded area, the device will indicate the objects surrounding the user when it is close. Ideally, it will give a beep from the direction of the object. The distance will map to a frequency, the closer the object is, the beeping will be in a higher frequency, to imitate urgency.
+
 2. When does it fail?
 Sometimes, the algorithm fails to detect an object in time or at all for the user to react accordingly. Alternatively, if there are too many objects in the way, the device might have trouble detecting all of them simultaneously. When there are input noises that are not important data points for the user to consider when navigating such as a leaf in the user's way versus a truck. Obviously, the leaf is negligible and the truck is not. 
 
