@@ -102,11 +102,21 @@ pi@ixe00:~/openCV-examples/object-detection $ python detect.py
 
 **\*\*\*Try each of the following four examples in the `openCV-examples`, include screenshots of your use and write about one design for each example that might work based on the individual benefits to each algorithm.\*\*\***
 
+<img width="1020" alt="Screen Shot 2022-10-23 at 7 46 12 PM" src="https://user-images.githubusercontent.com/54753807/199099611-041c2b6c-82be-4e9b-a876-27c0406b47e9.png">
+
 Contour detection: you can use contour detection to see the dimensions of door and whether an object will fit inside those parameters
+
+<img width="1728" alt="Screen Shot 2022-10-23 at 7 48 25 PM" src="https://user-images.githubusercontent.com/54753807/199099632-4cb0b758-677c-4c73-a5b5-1fc3b1bb15c3.png">
 
 Face detection: Identify people and their faces in a park or large community setting
 
+
+<img width="1024" alt="Screen Shot 2022-10-23 at 7 50 51 PM" src="https://user-images.githubusercontent.com/54753807/199099672-83f1d0be-0c63-429c-9eb4-64a4d181cf2e.png">
+
 Flow detection: Identify the movements and follow through of a basketball player when executing his shot
+
+
+<img width="517" alt="Screen Shot 2022-10-23 at 7 52 53 PM" src="https://user-images.githubusercontent.com/54753807/199099693-0e123c10-326b-435d-af54-c0471f8f25cf.png">
 
 Object detection: Self driving cars using object detection.
 
@@ -309,5 +319,11 @@ During the lecture, we mentioned questions to help characterize a material:
 
 Following exploration and reflection from Part 1, finish building your interactive system, and demonstrate it in use with a video.
 
+
 **\*\*\*Include a short video demonstrating the finished result.\*\*\***
 
+https://youtube.com/shorts/NJ8LIsDxA_4?feature=share
+
+https://github.com/984580403hyxhj/Interactive-Lab-Hub/blob/Fall2022/Lab%205/README.md
+
+To demonstrate our interactive system in use, we used the object detention to help blind people navigate their path. The object detector starts beeping when the user is within 2 feet of an immediate object. If the user gets even closer to the object, the system will respond with deeper and repetitive beeping sounds to alert the user of the immediate collision. Using this feedback loop the blind user is better able to navigate their surroundings safely and effectively. 
