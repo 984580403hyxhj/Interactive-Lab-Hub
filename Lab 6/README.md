@@ -1,6 +1,9 @@
 # Little Interactions Everywhere
 
 **NAMES OF COLLABORATORS HERE**
+Akhil Uddandam
+Steve Xue 
+
 
 ## Prep
 
