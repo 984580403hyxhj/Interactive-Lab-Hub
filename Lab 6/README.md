@@ -96,6 +96,12 @@ Once connected, you should be able to see all the messages under the IDD topic. 
 
 **\*\*\*Consider how you might use this messaging system on interactive devices, and draw/write down 5 ideas here.\*\*\***
 
+One great way of using this integrated messaging system among interactive devices is through multiplayer gaming wherein the players in a game interact with each other by messaging using the MQTT client.
+Office messenger app for pagers back in the day shared on a private network
+With growing smart technology at homes, this messaging system can be used to relay information or input/output among devices.
+Emergency warning system used to notify smart car users of weather conditions
+Electronic Banking systems that share information in their private network
+
 ### Part C
 ### Streaming a Sensor
 
@@ -117,7 +123,13 @@ Plug in the capacitive sensor board with the Qwiic connector. Use the alligator 
 
 **\*\*\*Include a picture of your setup here: what did you see on MQTT Explorer?\*\*\***
 
+![IMG_7295](https://user-images.githubusercontent.com/54753807/200444720-a3ec6512-276a-4b41-b419-767f8570e39f.jpg)
+
+<img width="923" alt="Screenshot 2022-11-07 at 7 33 10 PM" src="https://user-images.githubusercontent.com/54753807/200444899-9fa67ad4-6bae-4259-86e7-93b11117cb2b.png">
+
 **\*\*\*Pick another part in your kit and try to implement the data streaming with it.\*\*\***
+
+<img width="623" alt="Screenshot 2022-11-07 at 7 35 52 PM" src="https://user-images.githubusercontent.com/54753807/200445214-6968e3ef-5f89-48ec-aa17-1fa085c087ff.png">
 
 
 ### Part D
@@ -150,6 +162,14 @@ You may ask "but what if I missed class?" Am I not admitted into the collective 
 Of course not! You can go to [https://one-true-colornet.glitch.me/](https://one-true-colornet.glitch.me/) and become one with the ColorNet on the inter-webs. Glitch is a great tool for prototyping sites, interfaces and web-apps that's worth taking some time to get familiar with if you have a chance. Its not super pertinent for the class but good to know either way. 
 
 **\*\*\*Can you set up the script that can read the color anyone else publish and display it on your screen?\*\*\***
+https://github.com/984580403hyxhj/Interactive-Lab-Hub/blob/Fall2022/Lab%206/color_reader.py
+
+<img width="608" alt="Screenshot 2022-11-07 at 7 17 15 PM" src="https://user-images.githubusercontent.com/54753807/200445261-f4b7835c-6a27-4d4f-9e90-9f2201758bd7.png">
+
+<img width="279" alt="Screenshot 2022-11-07 at 7 17 11 PM" src="https://user-images.githubusercontent.com/54753807/200445361-c0fa43fc-424d-4bd8-99fd-473851b3d91f.png">
+
+![IMG_7298](https://user-images.githubusercontent.com/54753807/200445391-19494ce1-db2d-452a-9c35-8a8512d101fd.jpg)
+
 
 
 ### Part E
@@ -159,11 +179,23 @@ Find at least one class (more are okay) partner, and design a distributed applic
 
 **\*\*\*1. Explain your design\*\*\*** For example, if you made a remote controlled banana piano, explain why anyone would want such a thing.
 
+For our own distributed systems application, we will be designing a home safe that will protect our prized Quest 2 (or anything!)  from thieves in a public area. By having a distributed IoT, we will be harnessing the data retrieved from the webcam and distance sensor to protect our device. When the distance sensor detects an object/person within 2 feet, it will alert the user base on the MQTT client. Based on this input, the webcam will display on the user side and alert them of what is happening visually. Thereby, alerting the user of potential danger and who is responsible for it!
+
 **\*\*\*2. Diagram the architecture of the system.\*\*\*** Be clear to document where input, output and computation occur, and label all parts and connections. For example, where is the banana, who is the banana player, where does the sound get played, and who is listening to the banana music?
+![ff14-24 2](https://user-images.githubusercontent.com/54753807/200445435-dc12a39c-1e77-42dc-b8c5-7e0f5e2aa4fe.jpg)
 
 **\*\*\*3. Build a working prototype of the system.\*\*\*** Do think about the user interface: if someone encountered these bananas somewhere in the wild, would they know how to interact with them? Should they know what to expect?
 
-**\*\*\*4. Document the working prototype in use.\*\*\*** It may be helpful to record a Zoom session where you should the input in one location clearly causing response in another location.
+The user interface for our application is designed to be very friendly and easy to understand. All status and alerts will be seen and moderated from the user’s MQTT client base on his/her computer. Furthermore, the user will be able to access both sensor data at any time using the client interface. 
+
+
+**\*\*\*4. Document the working prototype in use.\*\*\*** It may be helpful to record a Zoom session where you should the input in one location clearly causing a response in another location.
+
+To test our prototype, we played out a sample scenario where an individual was attempting to steal our Quest 2 from its safe. The user was promptly alerted and provided with video evidence through a chain of distributed systems managed from their MQTT client network. 
+
+https://youtube.com/shorts/Imcm6uew7ZU?feature=share
+
 
 <!--**\*\*\*5. BONUS (Wendy didn't approve this so you should probably ignore it)\*\*\*** get the whole class to run your code and make your distributed system BIGGER.-->
+
 
